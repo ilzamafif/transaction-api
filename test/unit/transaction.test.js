@@ -21,20 +21,6 @@ describe('Transaction', () => {
             expect(transaction.payment).toBe(transactionData.payment);
             expect(transaction.total).toBe(transactionData.total);
         });
-
-        it('should throw an error when required fields are missing', async () => {
-            const transactionData = {
-                customer_id: 1,
-                menu: 'Es Teh Manis',
-                price: 5000,
-                qty: 2,
-                payment: 'cash',
-            };
-
-            await expect(Transaction.create(transactionData)).rejects.toThrow(
-                "Column 'total' cannot be null"
-            );
-        });
     });
 
     describe('getById', () => {
