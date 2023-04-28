@@ -5,12 +5,18 @@ API untuk melakukan transaksi. Dapat mencatat transaksi baru dan mengambil data 
 ## Daftar Isi
 
 - [Instalasi](#instalasi)
+- [Masalah Dan Solusi](#masalah-dan-solusi)
 - [Menjalankan Aplikasi](#menjalankan-aplikasi)
 - [Menggunakan API](#menggunakan-api)
   - [Membuat Transaksi Baru](#membuat-transaksi-baru)
   - [Mengambil Data Transaksi](#mengambil-data-transaksi)
 - [Menjalankan Unit Test](#menjalankan-unit-test)
 
+## Masalah Dan Solusi
+1.  Bagaimana jika terdapat ribuan transaksi pada database?
+      - untuk menghadapi permasalahan ribuan transaksi pada database, dapat digunakan indexing pada kolom yang sering digunakan dalam pencarian, seperti menu dan customer_id.
+2. Bagaimana jika terdapat banyak user yang mengakses API tersebut secara bersamaan.
+      - untuk menghadapi banyak user yang mengakses API secara bersamaan, dapat dilakukan penggunaan teknik caching atau load balancing pada server
 ## Instalasi
 
 1. Clone repository ini:
